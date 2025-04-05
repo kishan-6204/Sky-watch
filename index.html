@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css"> <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #9bd40cd6;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            color: #2f4f4f;
+        }
+
+        .container input {
+            padding: 10px;
+            width: 70%;
+            border: 2px solid #333;
+            border-radius: 4px;
+        }
+
+        .container button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #1e90ff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #4682b4;
+        }
+
+        #weatherResult {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
+
+        .weather-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #hourlyForecast, #dailyForecast {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #hourlyForecast h3, #dailyForecast h3 {
+            margin-bottom: 10px;
+            color: #2f4f4f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+        <div id="error" class="error hidden"></div>
+        <div id="weatherResult" class="hidden">
+            <i id="weatherIcon" class="weather-icon"></i>
+            <h2 id="cityName"></h2>
+            <p id="temperature" class="details"></p>
+            <p id="feelsLike" class="details"></p>
+            <p id="description" class="details"></p>
+            <p id="humidity" class="details"></p>
+            <p id="wind" class="details"></p>
+            <div id="hourlyForecast"></div>
+            <div id="dailyForecast"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
