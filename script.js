@@ -1,5 +1,5 @@
 // OpenWeatherMap API Key
-const apiKey = "8693bff0c9d67beac3194cf4ad8185a5"; // Replace with your API key
+const apiKey = "YOUR_API_KEY"; // Replace with your API key
 
 // DOM elements (add elements for forecast)
 const searchBtn = document.getElementById("searchBtn");
